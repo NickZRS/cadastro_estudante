@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-8 m-auto">
+      <form [formGroup]="formGroupClient">
+        <div class="mb-3">
+          <label for="nome" class="form-label"> Nome: </label>
+          <input
+            type="text"
+            formControlName="nome"
+            class="form-control"
+            id="name"
+            placeholder="Nome"
+          />
+        </div>
+
+        <div class="mb-3">
+            <label for="idade" class="form-label"> Idade: </label>
+            <input
+              type="number"
+              formControlName="idade"
+              class="form-control"
+              id="idade"
+              placeholder="Idade"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="faltas" class="form-label"> Faltas: </label>
+            <input
+              type="number"
+              formControlName="faltas"
+              class="form-control"
+              id="faltas"
+              placeholder="Faltas"
+            />
+          </div>
+  
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            formControlName="email"
+            class="form-control"
+            id="email"
+            placeholder="Email"
+          />
+        </div>
+        <div class="mb-3 d-flex justify-content-end">
+          <button class="btn btn-primary" (click)="save()">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Idade</th>
+        <th scope="col">Faltas</th>
+        <th scope="col">Email</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let estudante of estudantes">
+        <th scope="row">{{ estudante.id }}</th>
+        <td>{{ estudante.nome }}</td>
+        <td>{{ estudante.idade }}</td>
+        <td>{{ estudante.faltas }}</td>
+        <td>{{ estudante.email }}</td>
+        <td class="d-flex justify-content-end">
+        </td>
+      </tr>
+    </tbody>
+  </table>

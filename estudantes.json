@@ -1,0 +1,18 @@
+{
+  "estudante": [
+    {
+      "id": 1,
+      "nome": "Davi Dantas",
+      "idade": 18,
+      "faltas": 12,
+      "email": "davi@gmail.com"
+    },
+    {
+      "id": 2,
+      "nome": "Jeniffer Jensen",
+      "idade": 22,
+      "faltas": 2,
+      "email": "jeniffer@gmail.com"
+    }
+  ]
+}
